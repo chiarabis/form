@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+*{box-sizing: border-box;}
+body{
+    font-family: "Raleway", sans-serif;
+    color: #29335c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(#29335c, #65949a, #f3a712);
+}
+/*the container of form + title*/
+.container{
+    background-color: #a8c686;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 30px 30px -20px #3b3b3b;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #e4572e;
+    text-transform: uppercase;
+    font-size: larger;
+}
+.container a{
+    text-decoration: none;
+    color: #e4572e;
+}
+a:hover{text-decoration: underline;}
+a:active{color: #f0f0d0;}
+.container p{
+    margin-top: 30px;
+    font-size: smaller;
+    text-align: center;
+}
+
+/*style the submit button*/
+#btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: #e4572e;
+    color: #f0f0d0;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+}
+#btn:focus{outline: 0;}
+#btn:active{transform: scale(0.95);}
+
+/*style the form (input + label)*/
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #f0f0d0 solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 15px;
+    color: #29335c;
+}
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: #29335c;
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+    display: inline-block;
+    font-size: 15px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label,
+.form-control input:valid + label{
+    color: #f0f0d0;
+    transform: translateY(-30px);
+}
